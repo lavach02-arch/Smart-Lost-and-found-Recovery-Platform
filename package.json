@@ -1,0 +1,13 @@
+{
+  "name": "smartfind-platform",
+  "version": "1.0.0",
+  "description": "SmartFind - Smart Lost & Found Recovery Platform",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix frontend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend",
+    "build": "cd frontend && npm install && npm run build",
+    "start": "cd backend && npm start"
+  }
+}

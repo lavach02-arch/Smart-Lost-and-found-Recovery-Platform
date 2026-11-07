@@ -1,0 +1,17 @@
+# Render Blueprint Specification for Backend Service
+services:
+  - type: web
+    name: smartfind-backend-api
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        value: mongodb+srv://lakshmi_db_user:<password>@cluster0.qwmnfyg.mongodb.net/smartfind?retryWrites=true&w=majority
